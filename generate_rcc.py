@@ -9,10 +9,15 @@ __license__ = "GPL v3"
 # Standard library modules.
 import os
 import argparse
-import configparser
 import xml.etree.ElementTree as etree
 import xml.dom.minidom as minidom
 import subprocess
+import sys
+
+if sys.version[0] == '2':
+    import ConfigParser as configparser
+else:
+    import configparser
 
 # Third party modules.
 
