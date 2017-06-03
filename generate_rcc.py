@@ -12,12 +12,11 @@ import argparse
 import xml.etree.ElementTree as etree
 import xml.dom.minidom as minidom
 import subprocess
-import sys
 
-if sys.version[0] == '2':
-    import ConfigParser as configparser
-else:
+try:
     import configparser
+except ImportError:
+    import ConfigParser as configparser
 
 # Third party modules.
 
